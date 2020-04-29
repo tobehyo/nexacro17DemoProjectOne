@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_playerRegDetail" width="480" height="696" titletext="세부사항">
+    <Layouts>
+      <Layout height="696" mobileorientation="landscape" width="480">
+        <Static id="Static00" taborder="0" left="0" top="0" height="60" cssclass="sta_MLM_title" right="0"/>
+        <Static id="Static01" taborder="1" text="Add Detail" left="20" top="5" width="448" height="50" cssclass="sta_MLM_kboCI"/>
+        <Static id="Static03" taborder="2" text="NAME" left="8" top="60" height="60" cssclass="sta_MLM_tablebg" right="12"/>
+        <Edit id="Edit01" taborder="3" top="70" height="40" text="전지영" left="140" right="12"/>
+        <Static id="Static04" taborder="4" text="ADDRESS" left="8" top="120" height="162" cssclass="sta_MLM_tablebg" right="12"/>
+        <Edit id="Edit02" taborder="5" left="140" top="180" height="40" right="12"/>
+        <Button id="Button00" taborder="7" text="POST CODE" top="130" height="40" cssclass="btn_MLM_post" left="350" width="120"/>
+        <MaskEdit id="MaskEdit00" taborder="6" top="130" height="40" right="Button00:15" left="140"/>
+        <Edit id="Edit00" taborder="8" left="140" top="230" height="40" right="12"/>
+        <Static id="Static02" taborder="9" text="PHONE &#13;&#10;NUMBER" left="8" top="283" height="60" cssclass="sta_MLM_tablebg" right="12"/>
+        <Combo id="Combo00" taborder="10" left="140" top="293" height="40" innerdataset="ds_phoneNo" codecolumn="code" datacolumn="data" width="21.88%"/>
+        <MaskEdit id="MaskEdit01" taborder="11" left="Combo00:8" top="293" height="40" width="21.88%"/>
+        <MaskEdit id="MaskEdit02" taborder="12" top="293" height="40" width="21.25%" left="MaskEdit01:8"/>
+        <Static id="Static05" taborder="13" text="NUMBER" left="8" top="413" height="60" cssclass="sta_MLM_tablebg" right="12"/>
+        <Static id="Static06" taborder="14" left="8" top="473" height="60" cssclass="sta_MLM_tablebg" right="12" text="Salary &#13;&#10;Requirement"/>
+        <Static id="Static07" taborder="15" text="DATE" left="8" top="343" height="70" cssclass="sta_MLM_tablebg" right="12"/>
+        <Static id="Static08" taborder="16" text="Marital Status" left="8" top="603" height="60" cssclass="sta_MLM_tablebg" right="12"/>
+        <Edit id="Edit03" taborder="17" left="140" top="423" height="40" right="12"/>
+        <MaskEdit id="MaskEdit03" taborder="18" left="140" top="483" height="40" right="12" format="#,###"/>
+        <CheckBox id="CheckBox00" taborder="19" text="Married" left="140" top="613" width="193" height="40" value="true" cssclass="chk_MLM_marry"/>
+        <Static id="Static10" taborder="20" text="POSITION" left="8" top="533" height="70" cssclass="sta_MLM_tablebg" right="12"/>
+        <Combo id="Combo01" taborder="21" text="Combo01" left="140" top="548" width="226" height="40" innerdataset="ds_position" codecolumn="code" datacolumn="data" popuptype="center"/>
+        <Calendar id="Calendar01" taborder="22" left="140" top="358" width="226" height="40" daysize="40 40" headheight="50" popupsize="282 332" popuptype="system" usetrailingday="true"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_phoneNo">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="data">010</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="data">011</Col>
+          </Row>
+          <Row>
+            <Col id="code">3</Col>
+            <Col id="data">016</Col>
+          </Row>
+          <Row>
+            <Col id="code">4</Col>
+            <Col id="data">017</Col>
+          </Row>
+          <Row>
+            <Col id="code">5</Col>
+            <Col id="data">018</Col>
+          </Row>
+          <Row>
+            <Col id="code">6</Col>
+            <Col id="data">019</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_position">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="data">catcher</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="data">pitcher</Col>
+          </Row>
+          <Row>
+            <Col id="code">3</Col>
+            <Col id="data">outfielder</Col>
+          </Row>
+          <Row>
+            <Col id="code">4</Col>
+            <Col id="data">infielder</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

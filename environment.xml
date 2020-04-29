@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ENV version="2.1">
+  <Environment themeid="theme::default" datatyperule="2.0">
+    <ScreenDefinition>
+      <Screen id="Desktop_screen" type="desktop"/>
+      <Screen id="Tablet_screen" type="mobile_large"/>
+      <Screen id="Phone_screen" type="mobile_small" themeid="theme::mobile"/>
+    </ScreenDefinition>
+    <Variables/>
+    <Cookies/>
+    <httpheader/>
+  </Environment>
+</ENV>

@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Form_Comp" width="480" height="696" titletext="캘린더, Step">
+    <Layouts>
+      <Layout height="696" mobileorientation="landscape" width="480" stepcount="2">
+        <GroupBox id="GroupBox00" taborder="0" text="Calendar - popuptype" left="8" top="8" right="12" bottom="45"/>
+        <Calendar id="Calendar00" taborder="1" left="117" top="80" width="200" height="50" popuptype="none"/>
+        <Static id="Static00" taborder="2" text="normal" left="16" top="219" width="90" height="30" usedecorate="true" cssclass="sta_MLM_teamName"/>
+        <Calendar id="Calendar01" taborder="3" left="117" top="206" width="200" height="50" popuptype="normal" daysize="40 40" headheight="60" popupsize="282 342" usetrailingday="true"/>
+        <Calendar id="Calendar02" taborder="4" left="117" top="332" width="200" height="50" popuptype="center" daysize="40 40" headheight="60" popupsize="282 342" usetrailingday="true"/>
+        <Static id="Static04" taborder="5" text="system" left="16" top="468" width="90" height="30" usedecorate="true" cssclass="sta_MLM_teamName"/>
+        <Calendar id="Calendar03" taborder="6" left="117" top="458" width="200" height="50" popuptype="system" daysize="40 40" headheight="60" popupsize="282 342" usetrailingday="true"/>
+        <GroupBox id="GroupBox01" taborder="7" text="Menu - popuptype" left="8" top="8" right="12" positionstep="1" height="427"/>
+        <Menu id="Menu00" taborder="8" left="20" top="87" height="56" positionstep="1" innerdataset="ds_mnu" captioncolumn="caption" idcolumn="id" levelcolumn="level" right="26" popuptype="none"/>
+        <Menu id="Menu01" taborder="9" left="20" top="213" height="56" positionstep="1" innerdataset="ds_mnu" captioncolumn="caption" idcolumn="id" levelcolumn="level" right="26"/>
+        <Menu id="Menu02" taborder="10" left="20" top="359" height="56" positionstep="1" innerdataset="ds_mnu" captioncolumn="caption" idcolumn="id" levelcolumn="level" right="26" popuptype="center"/>
+        <Grid id="Grid00" taborder="11" left="8" top="445" width="460" positionstep="1" bottom="45" binddataset="ds_grd" scrollbardecbuttonsize="0" scrollbarincbuttonsize="0" autofittype="col">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="100"/>
+                <Column size="120"/>
+                <Column size="120"/>
+              </Columns>
+              <Rows>
+                <Row size="70" band="head"/>
+                <Row size="70"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Emblem"/>
+                <Cell col="1" text="Name"/>
+                <Cell col="2" text="HomeTown"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0"/>
+                <Cell col="1" text="bind:Column1"/>
+                <Cell col="2" text="bind:Column2"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static09" taborder="12" left="16" top="90" width="90" height="30" usedecorate="true" text="none" cssclass="sta_MLM_teamName"/>
+        <Static id="Static11" taborder="13" text="center" left="16" top="340" width="90" height="30" usedecorate="true" cssclass="sta_MLM_teamName"/>
+        <Static id="Static13" taborder="14" text="none" left="16" top="47" width="90" height="30" cssclass="sta_MLM_teamName" usedecorate="true" positionstep="1"/>
+        <Static id="Static14" taborder="15" text="normal" left="16" top="179" width="90" height="30" cssclass="sta_MLM_teamName" usedecorate="true" positionstep="1"/>
+        <Static id="Static15" taborder="16" text="center" left="16" top="319" width="90" height="30" cssclass="sta_MLM_teamName" usedecorate="true" positionstep="1"/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="ds_mnu">
+        <ColumnInfo>
+          <Column id="id" type="STRING" size="256"/>
+          <Column id="caption" type="STRING" size="256"/>
+          <Column id="level" type="STRING" size="256"/>
+          <Column id="enable" type="STRING" size="256"/>
+          <Column id="check" type="STRING" size="256"/>
+          <Column id="hotkey" type="STRING" size="256"/>
+          <Column id="icon" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="id">1</Col>
+            <Col id="caption">File</Col>
+            <Col id="level">0</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">2</Col>
+            <Col id="caption">New</Col>
+            <Col id="level">1</Col>
+            <Col id="enable"/>
+            <Col id="check"/>
+          </Row>
+          <Row>
+            <Col id="id">3</Col>
+            <Col id="caption">Open</Col>
+            <Col id="level">1</Col>
+            <Col id="check"/>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">4</Col>
+            <Col id="caption">Project</Col>
+            <Col id="level">1</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">5</Col>
+            <Col id="caption">File</Col>
+            <Col id="level">1</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">6</Col>
+            <Col id="caption">Close</Col>
+            <Col id="level">1</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">7</Col>
+            <Col id="caption">Save</Col>
+            <Col id="level">1</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">8</Col>
+            <Col id="caption">Edit</Col>
+            <Col id="level">0</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">9</Col>
+            <Col id="caption">Undo</Col>
+            <Col id="level">1</Col>
+            <Col id="enable"/>
+            <Col id="check"/>
+          </Row>
+          <Row>
+            <Col id="id">10</Col>
+            <Col id="caption">Redo</Col>
+            <Col id="level">1</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">11</Col>
+            <Col id="caption">Cut</Col>
+            <Col id="level">1</Col>
+            <Col id="hotkey"/>
+            <Col id="icon"/>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">12</Col>
+            <Col id="caption">Paste</Col>
+            <Col id="level">1</Col>
+            <Col id="icon"/>
+            <Col id="enable"/>
+            <Col id="hotkey"/>
+          </Row>
+          <Row>
+            <Col id="id">13</Col>
+            <Col id="caption">View</Col>
+            <Col id="level">0</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">14</Col>
+            <Col id="caption">Toolbars</Col>
+            <Col id="level">1</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">15</Col>
+            <Col id="caption">Standard</Col>
+            <Col id="level">1</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">16</Col>
+            <Col id="caption">Bookmark</Col>
+            <Col id="level">1</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">17</Col>
+            <Col id="caption">Algin</Col>
+            <Col id="level">1</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">18</Col>
+            <Col id="caption">Design</Col>
+            <Col id="level">0</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">19</Col>
+            <Col id="caption">Align</Col>
+            <Col id="level">1</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">20</Col>
+            <Col id="caption">Space</Col>
+            <Col id="level">1</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">21</Col>
+            <Col id="caption">Size</Col>
+            <Col id="level">1</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">22</Col>
+            <Col id="caption">Same Width</Col>
+            <Col id="level">2</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">23</Col>
+            <Col id="caption">Same Height</Col>
+            <Col id="level">2</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">24</Col>
+            <Col id="caption">Position</Col>
+            <Col id="level">2</Col>
+            <Col id="enable"/>
+          </Row>
+          <Row>
+            <Col id="id">25</Col>
+            <Col id="caption">Arrange</Col>
+            <Col id="level">1</Col>
+            <Col id="enable"/>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_grd">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>
